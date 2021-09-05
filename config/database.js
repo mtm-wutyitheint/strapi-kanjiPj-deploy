@@ -5,7 +5,7 @@ module.exports = ({ env }) => {
   if(env('NODE_ENV') === 'production'){
     const config = parse(process.env.DATABASE_URL)
     return {
-      defaultConnection = 'default',
+      defaultConnection : 'default',
       connections: {
         connector: 'bookshelf',
         settings: {
@@ -24,16 +24,17 @@ module.exports = ({ env }) => {
   }
   return {
   defaultConnection: 'default',
-  connections: {
-    default: {
-      connector: 'bookshelf',
-      settings: {
-        client: 'sqlite',
-        filename: env('DATABASE_FILENAME', '.tmp/data.db'),
-      },
-      options: {
-        useNullAsDefault: true,
+    connections: {
+      default: {
+        connector: 'bookshelf',
+        settings: {
+          client: 'sqlite',
+          filename: env('DATABASE_FILENAME', '.tmp/data.db'),
+        },
+        options: {
+          useNullAsDefault: true,
+        },
       },
     },
-  },
-}};
+  }
+};
