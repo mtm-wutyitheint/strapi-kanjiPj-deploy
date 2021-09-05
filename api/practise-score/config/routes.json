@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/practise-scores",
+      "handler": "practise-score.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/practise-scores/count",
+      "handler": "practise-score.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/practise-scores/:id",
+      "handler": "practise-score.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/practise-scores",
+      "handler": "practise-score.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/practise-scores/:id",
+      "handler": "practise-score.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/practise-scores/:id",
+      "handler": "practise-score.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

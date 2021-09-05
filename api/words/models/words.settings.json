@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "words",
+  "info": {
+    "name": "Words"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hiragana": {
+      "type": "string"
+    },
+    "katanaka": {
+      "type": "string"
+    },
+    "romaji": {
+      "type": "string"
+    }
+  }
+}

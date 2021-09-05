@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/exam-scores",
+      "handler": "exam-score.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/exam-scores/count",
+      "handler": "exam-score.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/exam-scores/:id",
+      "handler": "exam-score.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/exam-scores",
+      "handler": "exam-score.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/exam-scores/:id",
+      "handler": "exam-score.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/exam-scores/:id",
+      "handler": "exam-score.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

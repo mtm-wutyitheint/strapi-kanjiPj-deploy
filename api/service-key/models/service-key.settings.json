@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service_keys",
+  "info": {
+    "name": "service_key"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "expired": {
+      "type": "date"
+    }
+  }
+}

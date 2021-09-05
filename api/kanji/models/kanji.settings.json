@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kanjis",
+  "info": {
+    "name": "Kanji",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "kanji": {
+      "type": "string",
+      "required": false
+    },
+    "meaning": {
+      "type": "string",
+      "required": false
+    },
+    "onyomi": {
+      "type": "string",
+      "required": false
+    },
+    "onRomaji": {
+      "type": "string",
+      "required": false
+    },
+    "logoPicture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "examplePicture": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "sampleText1": {
+      "type": "text"
+    },
+    "sampleText2": {
+      "type": "text"
+    },
+    "sampleText3": {
+      "type": "text"
+    },
+    "sampleText4": {
+      "type": "text"
+    },
+    "kunyomi": {
+      "type": "string"
+    },
+    "kunRomaji": {
+      "type": "string"
+    },
+    "level": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

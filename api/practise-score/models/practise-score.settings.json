@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "practise_scores",
+  "info": {
+    "name": "practiseScore",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "score": {
+      "type": "integer",
+      "required": true
+    },
+    "total": {
+      "type": "integer",
+      "required": true
+    },
+    "answer_date": {
+      "type": "datetime",
+      "required": true
+    },
+    "player": {
+      "via": "practise_scores",
+      "model": "players"
+    },
+    "kind": {
+      "type": "enumeration",
+      "enum": [
+        "random",
+        "chapter"
+      ]
+    },
+    "chapters": {
+      "type": "richtext"
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "N5",
+        "N4"
+      ],
+      "required": true
+    },
+    "random_count": {
+      "type": "integer"
+    },
+    "user": {
+      "via": "practise_scores",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

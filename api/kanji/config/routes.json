@@ -1,0 +1,68 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/kanjis",
+      "handler": "kanji.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/kanjis/count",
+      "handler": "kanji.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/kanjis/:id",
+      "handler": "kanji.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/kanjis",
+      "handler": "kanji.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/kanjis/:id",
+      "handler": "kanji.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/kanjis/:id",
+      "handler": "kanji.delete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/kanjis/import",
+      "handler": "kanji.importKanji",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/quiz",
+      "handler": "kanji.quiz",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

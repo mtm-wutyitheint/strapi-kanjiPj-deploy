@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "players",
+  "info": {
+    "name": "Players",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "password": {
+      "type": "password"
+    },
+    "current_n5_score": {
+      "type": "string"
+    },
+    "current_n4_score": {
+      "type": "string"
+    },
+    "profile": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "time_taken": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "practise_scores": {
+      "via": "player",
+      "collection": "practise-score"
+    },
+    "exam_scores": {
+      "via": "player",
+      "collection": "exam-score"
+    }
+  }
+}
