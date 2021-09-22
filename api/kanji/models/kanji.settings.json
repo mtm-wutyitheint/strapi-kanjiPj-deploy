@@ -73,6 +73,9 @@
     "level": {
       "type": "string",
       "required": false
+    },
+    "KanjiNum": {
+      "type": "biginteger"
     }
   }
 }
