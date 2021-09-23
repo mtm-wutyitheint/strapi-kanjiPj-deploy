@@ -7,7 +7,8 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "stop": "strapi stop"
   },
   "devDependencies": {},
   "dependencies": {
@@ -20,20 +21,22 @@
     "strapi": "3.6.5",
     "strapi-admin": "3.6.5",
     "strapi-connector-bookshelf": "3.6.5",
+    "strapi-connector-mongoose": "^3.6.8",
     "strapi-plugin-content-manager": "3.6.5",
     "strapi-plugin-content-type-builder": "3.6.5",
     "strapi-plugin-email": "3.6.5",
     "strapi-plugin-graphql": "3.6.5",
     "strapi-plugin-i18n": "3.6.5",
+    "strapi-plugin-mongodb-files": "^3.1.6",
     "strapi-plugin-upload": "3.6.5",
     "strapi-plugin-users-permissions": "3.6.5",
     "strapi-provider-email-sendgrid": "^3.6.8",
     "strapi-provider-upload-aws-s3": "^3.6.8",
+    "strapi-provider-upload-local": "^3.6.8",
+    "strapi-provider-upload-mongodb": "^3.1.1",
     "strapi-utils": "3.6.5"
   },
-  "author": {
-    "name": "A Strapi developer"
-  },
+  "author": "A Strapi developer",
   "strapi": {
     "uuid": "e811924c-e6d4-42bc-8e48-d8571b4c523a",
     "template": "https://github.com/strapi/strapi-template-blog"
@@ -42,5 +45,14 @@
     "node": ">=10.16.0 <=14.x.x",
     "npm": "^6.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scm-wutyitheint/strapi-kanjiPj-deploy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/scm-wutyitheint/strapi-kanjiPj-deploy/issues"
+  },
+  "homepage": "https://github.com/scm-wutyitheint/strapi-kanjiPj-deploy#readme"
 }

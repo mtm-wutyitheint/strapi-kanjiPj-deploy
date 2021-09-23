@@ -20,10 +20,7 @@ module.exports = {
           isDuplicated = true;
           messages = messages + `${word.kanji}`;
         }
-        if (isDuplicated) {
-          return ctx.response.conflict(messages);
-        }
-        let entity = await strapi.services.kanji.create(word);
+       let entity = await strapi.services.kanji.create(word);
         entities.push(entity);
       }));
 
