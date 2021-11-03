@@ -9,10 +9,10 @@ module.exports = ({ env }) => ({
           port: env.int('DATABASE_PORT', 27017),
           database: 'strapi',
         },
-        // options: {
-        //   authenticationDatabase: env('AUTHENTICATION_DATABASE', null),
-        //   ssl: env.bool('DATABASE_SSL', true),
-        // },
+        options: {
+          authenticationDatabase: env('AUTHENTICATION_DATABASE', null),
+          ssl: env.bool('DATABASE_SSL', true),
+        },
       },
     },
   })
