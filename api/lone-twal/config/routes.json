@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/lone-twals",
+      "handler": "lone-twal.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/lone-twals/count",
+      "handler": "lone-twal.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/lone-twals/:id",
+      "handler": "lone-twal.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/lone-twals",
+      "handler": "lone-twal.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/lone-twals/:id",
+      "handler": "lone-twal.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/lone-twals/:id",
+      "handler": "lone-twal.delete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/lone-twals/import",
+      "handler": "lone-twal.importgameData",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

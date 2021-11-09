@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lone_twals",
+  "info": {
+    "name": "LoneTwal",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "kanji": {
+      "type": "string"
+    },
+    "meaning": {
+      "type": "string"
+    },
+    "furigana": {
+      "type": "string"
+    }
+  }
+}
