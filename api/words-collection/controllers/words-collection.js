@@ -8,18 +8,20 @@
 var fs = require("fs");
 var parse = require("csv-parse");
 const path = require('path');
+const { dirname } = require("path");
+// const upload = require('../../../public/uploads')
 
 module.exports = {
   generateUsername(firstname, surname) {
     return `${firstname[0]}-${surname}`.toLowerCase();
   },
   async uploadFile(ctx) {
-    const { files } = ctx.request;
-    console.log(files)
+    const rootDir = process.cwd();
+    console.log((rootDir + '/public/uploads/' + 'file.csv'))
     let entities = [];
     try {
       var csvData = [];
-      fs.createReadStream(path.resolve(__dirname, '1122.csv'))
+      fs.createReadStream(rootDir + '/public/uploads/' + 'file.csv')
         .pipe(parse())
         .on("data", async function (row) {
           const jpDatas = {
