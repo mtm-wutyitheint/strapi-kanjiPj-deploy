@@ -55,6 +55,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "POST",
+      "path": "/words-collections/importData",
+      "handler": "words-collection.uploadData",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }

@@ -40,4 +40,19 @@ module.exports = {
       sanitizeEntity(entity, { model: strapi.models["words-collection"] })
     );
   },
+  async uploadData(ctx) {
+    const words = ctx.request.body;
+    let entities = [];
+    try {
+      await Promise.all(words.map(async (word) => {
+       let entity = await strapi.services["words-collection"].create(word);
+        entities.push(entity);
+      }));
+
+    } catch (err) {
+      console.error(err.message);
+      return ctx.response.badRequest(err.message);
+    }
+    return entities.map(entity => sanitizeEntity(entity, { model: strapi.models["words-collection"] }));
+  },
 };
