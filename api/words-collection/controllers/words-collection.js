@@ -7,16 +7,19 @@
  */
 var fs = require("fs");
 var parse = require("csv-parse");
+const path = require('path');
 
 module.exports = {
   generateUsername(firstname, surname) {
     return `${firstname[0]}-${surname}`.toLowerCase();
   },
   async uploadFile(ctx) {
+    const { files } = ctx.request;
+    console.log(files)
     let entities = [];
     try {
       var csvData = [];
-      fs.createReadStream("C:/Users/WutyiTheint/Downloads/辞書_9000.csv")
+      fs.createReadStream(path.resolve(__dirname, '1122.csv'))
         .pipe(parse())
         .on("data", async function (row) {
           const jpDatas = {
@@ -53,6 +56,6 @@ module.exports = {
       console.error(err.message);
       return ctx.response.badRequest(err.message);
     }
-    return entities.map(entity => sanitizeEntity(entity, { model: strapi.models["words-collection"] }));
+    return entities;
   },
 };
