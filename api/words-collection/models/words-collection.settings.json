@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "words_collections",
+  "info": {
+    "name": "WordsCollection",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "kanji": {
+      "type": "string"
+    },
+    "furigana": {
+      "type": "string"
+    },
+    "meaning": {
+      "type": "text"
+    },
+    "myanmarMeaning": {
+      "type": "text"
+    }
+  }
+}

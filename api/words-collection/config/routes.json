@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/words-collections",
+      "handler": "words-collection.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/words-collections/count",
+      "handler": "words-collection.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/words-collections/:id",
+      "handler": "words-collection.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/words-collections",
+      "handler": "words-collection.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/words-collections/:id",
+      "handler": "words-collection.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/words-collections/:id",
+      "handler": "words-collection.delete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/words-collections/import",
+      "handler": "words-collection.uploadFile",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
